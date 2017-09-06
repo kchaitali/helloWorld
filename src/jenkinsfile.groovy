@@ -11,11 +11,8 @@ stages {
             }
         }
 
-        stage ('git clone') {
-            steps {
-                sh "mkdir hello"
-                dir ('hello'){
-                    git branch: 'master', credentialsId: "${params.gitCredentialsId}", url: "${params.helloWorldRepo}"
-                }
-            }
+        stage('Checkout'){
+        git branch: 'master', credentialsId: "${params.gitCredentialsId}", url: "${params.helloWorldRepo}"
         }
+
+        
