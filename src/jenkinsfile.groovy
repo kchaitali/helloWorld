@@ -15,4 +15,8 @@ stages {
         git branch: 'master', credentialsId: "${params.gitCredentialsId}", url: "${params.helloWorldRepo}"
         }
 
+        stage('Build') {
+    'mvn clean package'
+  }
+
         
