@@ -18,5 +18,9 @@ stages {
         stage('Build') {
     'mvn clean package'
   }
+}
+}
+
+
 
         
