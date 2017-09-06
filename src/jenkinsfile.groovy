@@ -2,7 +2,7 @@ pipeline {
     agent any
     parameters {
         string(name: 'helloWorldRepo', defaultValue: 'https://github.com/kchaitali/helloWorld.git', description: 'helloWorld repo')
-        string(name: 'gitCredentialsId', defaultValue: '6ccad742-12fa-491a-b034-4c8909331a70', description: 'personal')
+        string(name: 'gitCredentialsId', defaultValue: 'personal', description: 'personal')
     }
 stages {
         stage ('delete workspace'){
